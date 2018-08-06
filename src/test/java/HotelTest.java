@@ -145,4 +145,7 @@ public class HotelTest {
         assertEquals(expectedRooms, codeClanTowers.listEmptyRooms("Bedrooms"));
     }
 
+//    @Test
+//    public void can
+
 }

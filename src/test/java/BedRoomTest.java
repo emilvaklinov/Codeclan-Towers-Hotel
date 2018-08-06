@@ -79,7 +79,7 @@ import static org.junit.Assert.assertEquals;
             assertEquals(2, apartment.guestCount());
         }
 
-//    BedRoom specific tests:
+//     Specific tests:
 
         @Test
         public void hasRoomNumber(){

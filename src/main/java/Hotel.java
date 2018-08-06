@@ -18,18 +18,12 @@ public class Hotel {
         return this.rooms;
     }
 
-    public ArrayList<Room> getCategoryRooms() {
-        return getCategoryRooms();
-    }
-
     public ArrayList<Room> getCategoryRooms(String roomCategory) {
-        ArrayList<Room> roomsInCategory = rooms.get(roomCategory);
-        return roomsInCategory;
+        return rooms.get(roomCategory);
     }
 
     public ArrayList<String> getRoomCategories() {
-        ArrayList<String> categoriesList = new ArrayList<>(rooms.keySet());
-        return categoriesList;
+        return new ArrayList<>(rooms.keySet());
     }
 
     public void addRoomCategory(String roomCategory) {
@@ -37,7 +31,7 @@ public class Hotel {
     }
 
     public boolean addRoom(String roomCategory, Room newRoom) {
-        if (rooms.containsKey(roomCategory) == true) {
+        if (rooms.containsKey(roomCategory)) {
             ArrayList<Room> roomsInCategory = rooms.get(roomCategory);
             roomsInCategory.add(newRoom);
             return true;
@@ -47,7 +41,7 @@ public class Hotel {
     }
 
     public boolean checkInGuest(Guest guest, String roomCategory, Room room) {
-        if (rooms.containsKey(roomCategory) == true) {
+        if (rooms.containsKey(roomCategory)) {
 
             ArrayList<Room> roomsInCategory = rooms.get(roomCategory);
 
@@ -69,7 +63,7 @@ public class Hotel {
     }
 
     public boolean checkOutGuest(Guest guest, String roomCategory, Room room) {
-        if (rooms.containsKey(roomCategory) == true) {
+        if (rooms.containsKey(roomCategory)) {
 
             ArrayList<Room> roomsInCategory = rooms.get(roomCategory);
 
@@ -91,7 +85,7 @@ public class Hotel {
     }
 
     public ArrayList<Guest> listGuests(String roomCategory, Room room) {
-        if (rooms.containsKey(roomCategory) == true) {
+        if (rooms.containsKey(roomCategory)) {
             ArrayList<Room> roomsInCategory = rooms.get(roomCategory);
 
             if (roomsInCategory.contains(room)) {
@@ -106,7 +100,7 @@ public class Hotel {
     }
 
     public ArrayList<Room> listEmptyRooms(String roomCategory) {
-        if (rooms.containsKey(roomCategory) == true) {
+        if (rooms.containsKey(roomCategory)) {
             ArrayList<Room> roomsInCategory = rooms.get(roomCategory);
             ArrayList<Room> EmptyRoomsInCategory = new ArrayList<>();
 
